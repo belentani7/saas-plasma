@@ -221,7 +221,7 @@ body {
 }
 
 .data {
-  @apply font-mono font-variant-numeric;
+  @apply font-mono tabular-nums;
 }
 
 /* Utility for hiding scrollbar but keeping scroll */

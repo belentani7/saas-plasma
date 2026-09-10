@@ -8,7 +8,7 @@ import { plasmaUniforms, plasmaVertexShader, plasmaFragmentShader } from '@/lib/
 
 // Extend Three.js with our custom shader material
 const PlasmaShaderMaterial = shaderMaterial(
-  plasmaUniforms,
+  plasmaUniforms as any,
   plasmaVertexShader,
   plasmaFragmentShader
 );
@@ -64,13 +64,13 @@ export function PlasmaBackground({
 
   const qualitySettings = useMemo(() => {
     if (quality === 'low' || isLowPower) {
-      return { dpr: [1, 1.5], aa: false, qualityLevel: 0.5 };
+      return { dpr: [1, 1.5] as [number, number], aa: false, qualityLevel: 0.5 };
     }
     if (quality === 'high') {
-      return { dpr: [1, 2], aa: true, qualityLevel: 1.0 };
+      return { dpr: [1, 2] as [number, number], aa: true, qualityLevel: 1.0 };
     }
     // auto
-    return { dpr: [1, 2], aa: true, qualityLevel: isLowPower ? 0.5 : 1.0 };
+    return { dpr: [1, 2] as [number, number], aa: true, qualityLevel: isLowPower ? 0.5 : 1.0 };
   }, [quality, isLowPower]);
 
   // Mouse tracking
