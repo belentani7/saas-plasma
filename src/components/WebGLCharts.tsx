@@ -19,7 +19,7 @@ interface MetricCard3DProps {
 }
 
 function MetricCard3DInner({ title, value, change, positive, icon, children }: MetricCard3DProps) {
-  const groupRef = useRef<THREE.Group>(null);
+  const groupRef = useRef<THREE.Group | null>(null);
   const [hovered, setHovered] = useState(false);
   const [clicked, setClicked] = useState(false);
 
@@ -216,8 +216,8 @@ interface Globe3DProps {
 }
 
 function Globe3DInner({ points = [] }: Globe3DProps) {
-  const sphereRef = useRef<THREE.Mesh>(null);
-  const pointsRef = useRef<THREE.Points>(null);
+  const sphereRef = useRef<THREE.Mesh | null>(null);
+  const pointsRef = useRef<THREE.Points | null>(null);
 
   useFrame((state) => {
     if (sphereRef.current) {
@@ -264,7 +264,7 @@ function Globe3DInner({ points = [] }: Globe3DProps) {
         />
       </mesh>
 
-      <Points ref={pointsRef}>
+      <points ref={pointsRef}>
         <bufferGeometry>
           <bufferAttribute
             attach="attributes-position"
@@ -313,7 +313,7 @@ function Globe3DInner({ points = [] }: Globe3DProps) {
           vertexColors={true}
           blending={THREE.AdditiveBlending}
         />
-      </Points>
+      </points>
 
       <Html
         transform
