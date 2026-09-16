@@ -7,15 +7,6 @@ import { Points, BufferGeometry, BufferAttribute, ShaderMaterial, AdditiveBlendi
 
 extend({ Points, BufferGeometry, BufferAttribute, ShaderMaterial });
 
-declare module '@react-three/fiber' {
-  interface ThreeElements {
-    points: any;
-    bufferGeometry: any;
-    bufferAttribute: any;
-    shaderMaterial: any;
-  }
-}
-
 const particleVertexShader = `
   attribute float size;
   attribute vec3 customColor;
