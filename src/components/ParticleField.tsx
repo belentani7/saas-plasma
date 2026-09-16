@@ -81,7 +81,7 @@ function ParticleSystem({ count = 3000, color1 = '#8b3eff', color2 = '#d946ef', 
     return { positions: arr, sizes, colors };
   }, [count, color1, color2, color3]);
   
-  const geometryRef = useRef<THREE.BufferGeometry>(null);
+  const geometryRef = useRef<THREE.BufferGeometry | null>(null);
   
   if (!geometryRef.current) {
     geometryRef.current = new THREE.BufferGeometry();
@@ -144,8 +144,8 @@ export function ParticleField({
 }
 
 function OrbitalParticles({ count = 1000, radius = 3, speed = 0.5 }) {
-  const geometryRef = useRef<THREE.BufferGeometry>(null);
-  const materialRef = useRef<THREE.ShaderMaterial>(null);
+  const geometryRef = useRef<THREE.BufferGeometry | null>(null);
+  const materialRef = useRef<THREE.ShaderMaterial | null>(null);
   
   if (!geometryRef.current) {
     const positions = new Float32Array(count * 3);
