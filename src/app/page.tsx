@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import PlasmaBackground from '@/components/PlasmaBackground';
 import { ScrollItem } from '@/components/InfiniteScroll';
 
@@ -49,6 +50,12 @@ export default function Home() {
           >
             Explore features
           </a>
+          <Link
+            href="/audit"
+            className="glass rounded-full px-8 py-3 font-heading font-semibold text-milky-300 transition hover:text-milky-50"
+          >
+            Abrir Plasma Audit
+          </Link>
           <a
             href="https://github.com/belentani7/saas-plasma"
             className="glass rounded-full px-8 py-3 font-heading font-semibold text-milky-300 transition hover:text-milky-50"
