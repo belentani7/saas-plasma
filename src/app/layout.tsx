@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'SaaS Plasma — UV / Blacklight Starter',
+  title: 'PLASMA AUDIT — Auditoria 100 de repositorios',
   description:
-    'Ultra-violet plasma SaaS starter built with Next.js, React Three Fiber, Framer Motion and Tailwind CSS.',
+    'Audita cualquier repositorio de GitHub: score documental y de produccion (SDD, CI, tests, seguridad, deploy) con Next.js y la API de GitHub.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
