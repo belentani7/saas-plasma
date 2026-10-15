@@ -1,13 +1,25 @@
 # Security Policy
 
-## Reporte de vulnerabilidades
+## Reporting a Vulnerability
 
-Reporta privadamente en https://github.com/belentani7/saas-plasma/security/advisories/new
+Please report security vulnerabilities via email to belentani7pedro@gmail.com.
 
-No publiques 0-days de forma pública.
+## Code Scanning
 
-## Versiones soportadas
+This project uses GitHub CodeQL for automated security scanning. All security issues detected by CodeQL will be addressed with priority.
 
-| Rama | Soportada |
-|------|-----------|
-| main | Sí |
+## Dependabot
+
+Dependabot alerts security vulnerabilities in dependencies. Dependabot security updates will be accepted via Pull Request.
+
+## Secret Protection
+
+GitHub Secret Protection scans for hardcoded secrets. Do not commit API keys, tokens, or passwords to this repository.
+
+## Advanced Security
+
+Enable GitHub Advanced Security for:
+- Dependabot alerts
+- CodeQL analysis
+- Secret scanning
+- Push protection
